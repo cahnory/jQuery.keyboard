@@ -1,0 +1,168 @@
+html, body { margin: 0;}
+.keyboard {
+	background: #7D7D82;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#97979C), to(#67676C));
+	background-image: -webkit-linear-gradient(top, #97979C, #67676C);
+	background-image:    -moz-linear-gradient(top, #97979C, #67676C);
+	background-image:     -ms-linear-gradient(top, #97979C, #67676C);
+	background-image:      -o-linear-gradient(top, #97979C, #67676C);
+	background-image:         linear-gradient(top, #97979C, #67676C);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#97979C', EndColorStr='#67676C');
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#97979C', EndColorStr='#67676C');
+	-webkit-box-shadow: inset 0 1px #C7C7CC, 0 -1px rgba(0,0,0,.6);
+	-moz-box-shadow: inset 0 1px #C7C7CC, 0 -1px rgba(0,0,0,.6);
+	box-shadow: inset 0 1px #C7C7CC, 0 -1px rgba(0,0,0,.6);
+	padding: 6px 0 0;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+.keyboard-row {
+	list-style: none;
+	padding: 0 3px;
+	margin: 0 auto;
+	width: 588px;
+}
+
+.keyboard-key {
+	color: #000;
+	cursor: pointer;
+	display: block;
+	display: -moz-inline-box;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	font: 16px "Lucida Grande", Verdana, Arial, sans-serif;
+	height: 16px;
+	line-height: 16px;
+	margin: 0 3px 6px;
+	width: 16px;
+	padding: 12px;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 1;
+	-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-o-user-select:none;user-select:none;
+	
+	background: #EEEEF3;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#F7F7FC), to(#E7E7EC));
+	background-image: -webkit-linear-gradient(top, #F7F7FC, #E7E7EC);
+	background-image:    -moz-linear-gradient(top, #F7F7FC, #E7E7EC);
+	background-image:     -ms-linear-gradient(top, #F7F7FC, #E7E7EC);
+	background-image:      -o-linear-gradient(top, #F7F7FC, #E7E7EC);
+	background-image:         linear-gradient(top, #F7F7FC, #E7E7EC);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#F7F7FC', EndColorStr='#E7E7EC');
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px #FFF, 0 2px 2px #000;
+	-moz-box-shadow: inset 0 1px #FFF, 0 2px 2px #000;
+	box-shadow: inset 0 1px #FFF, 0 2px 2px #000;
+	text-shadow: 0 1px #FFF;
+}
+.keyboard-key:hover,
+.keyboard-alt-key:hover {
+	color: #2054DA;
+	text-shadow: 0 0 12px #2054DA, 0 1px #FFF;
+	z-index: 2;
+}
+.keyboard-key:active {
+	background: #E7E7EC;
+	-webkit-box-shadow: inset 0 1px #F7F7FC, 0 1px 1px #000;
+	-moz-box-shadow: inset 0 1px #F7F7FC, 0 1px 1px #000;
+	box-shadow: inset 0 1px #F7F7FC, 0 1px 1px #000;
+	top: 1px;
+}
+
+.keyboard-held .keyboard-alt { display: block; }
+.keyboard-alt {
+	bottom: 40px;
+	display: none;
+	left: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	
+	background: #EEEEF3;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#F7F7FC), to(#E7E7EC));
+	background-image: -webkit-linear-gradient(top, #F7F7FC, #E7E7EC);
+	background-image:    -moz-linear-gradient(top, #F7F7FC, #E7E7EC);
+	background-image:     -ms-linear-gradient(top, #F7F7FC, #E7E7EC);
+	background-image:      -o-linear-gradient(top, #F7F7FC, #E7E7EC);
+	background-image:         linear-gradient(top, #F7F7FC, #E7E7EC);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#F7F7FC', EndColorStr='#E7E7EC');
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px #FFF, 0 1px 2px #000;
+	-moz-box-shadow: inset 0 1px #FFF, 0 1px 2px #000;
+	box-shadow: inset 0 1px #FFF, 0 1px 2px #000;
+}
+.keyboard-alt-key {
+	color: #000;
+	cursor: pointer;
+	height: 16px;
+	line-height: 16px;
+	width: 16px;
+	padding: 12px;
+	text-shadow: 0 1px #FFF;
+}
+
+/* Special keys */
+.keyboard-key-space { width: 466px; }
+.keyboard-key-tab { padding-right: 36px; }
+.keyboard-key-capsLock { padding-right: 48px; }
+.keyboard-caps .keyboard-key-leftShift,
+.keyboard-caps .keyboard-key-rightShift,
+.keyboard-capsLocked .keyboard-key-capsLock {
+	color: #2054DA;
+	text-shadow: 0 0 12px #2054DA, 0 1px #FFF;
+}
+.keyboard-key-leftShift { padding-right: 30px; }
+.keyboard-key-rightShift { padding-left: 30px; }
+.keyboard-key-backSpace { padding-left: 48px; }
+.keyboard-key-return {
+	-webkit-border-radius: 4px 4px 0 4px;
+	-moz-border-radius: 4px 4px 0 4px;
+	border-radius: 4px 4px 0 4px;
+	padding: 18px 12px 6px 24px;
+	background: #EEEEF3;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#F7F7FC), to(#F0F0F5));
+	background-image: -webkit-linear-gradient(top, #F7F7FC, #F0F0F5);
+	background-image:    -moz-linear-gradient(top, #F7F7FC, #F0F0F5);
+	background-image:     -ms-linear-gradient(top, #F7F7FC, #F0F0F5);
+	background-image:      -o-linear-gradient(top, #F7F7FC, #F0F0F5);
+	background-image:         linear-gradient(top, #F7F7FC, #F0F0F5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#F7F7FC', EndColorStr='#F0F0F5');
+}
+.keyboard-key-return:after {
+	content: '';
+	display: block;
+	height: 46px;
+	position: absolute;
+	right: 0;
+	top: 40px;
+	width: 40px;
+	
+	background: #EEEEF3;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#F0F0F5), to(#E7E7EC));
+	background-image: -webkit-linear-gradient(top, #F0F0F5, #E7E7EC);
+	background-image:    -moz-linear-gradient(top, #F0F0F5, #E7E7EC);
+	background-image:     -ms-linear-gradient(top, #F0F0F5, #E7E7EC);
+	background-image:      -o-linear-gradient(top, #F0F0F5, #E7E7EC);
+	background-image:         linear-gradient(top, #F0F0F5, #E7E7EC);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#F0F0F5', EndColorStr='#E7E7EC');
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+	-webkit-box-shadow: 0 2px 2px #000;
+	-moz-box-shadow: 0 2px 2px #000;
+	box-shadow: 0 2px 2px #000;
+}
+.keyboard-key-return:active:after {
+	background: #E7E7EC;
+	-webkit-box-shadow: 0 1px 1px #000;
+	-moz-box-shadow: 0 1px 1px #000;
+	box-shadow: 0 1px 1px #000;
+}
