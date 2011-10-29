@@ -65,9 +65,10 @@
 					}
 				//	Delete backward
 				} else if(o.key.name === 'backSpace') {
-					var form	= input.parents('form');
-					if(form.length() > 0) {
-						form.submit();
+					if(input.selection().length()) {
+						input.selection().clear();
+					} else {
+						input.selection().set(input.selection().start() - 1, 1).clear();
 					}
 				//	Move carret
 				} else if(o.key.name === 'leftArrow') {
