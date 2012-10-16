@@ -86,7 +86,7 @@
 		});
 		
 		// Hide
-		$('[type="text"],textarea').bind('blur.keyboard', function(e) {
+		$('[type="password"],[type="text"],textarea').bind('blur.keyboard', function(e) {
 			unsetFocus($(e.target));
 		});
 		
