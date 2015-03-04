@@ -81,7 +81,7 @@
 		});
 		
 		// Show
-		$('input[type!="submit"],textarea').live('focus', function(e) {
+		$('input[type!="submit"],textarea').on('focus', function(e) {
 			setFocus($(e.target));
 		});
 		
